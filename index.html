@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- Angular Material CSS using GitCDN to load directly from `bower-material/master` -->
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.min.css">
+
+    <!-- Angular Material Dependencies -->
+
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="./bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="./bower_components/angular-material/angular-material.min.js"></script>
+    <script src="./node_modules/angular-sortable-view/src/angular-sortable-view.min.js"></script>
+    <script src="./index.js"></script>
+
+</head>
+
+
+
+<body ng-app="starter">
+<md-content ng-controller="homeController" >
+
+
+    <br />
+    <div layout="row"  sv-root>
+        <div flex="23" >
+            <md-card >
+                <md-toolbar class="md-warn md-hue-3">
+                    <div class="md-toolbar-tools">
+
+                            <h2>
+                            <span><i>To Do</i></span>
+                            </h2>
+
+                        <span flex></span>
+                    </div>
+                </md-toolbar>
+            </md-card>
+            <md-whiteframe   sv-part="modelArray">
+                <!--<span>.md-whiteframe-1dp</span>-->
+                <md-card ng-repeat="item in modelArray" sv-element>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{item}}</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                </md-card>
+
+            </md-whiteframe>
+        </div>
+
+
+        <div flex="23" >
+            <md-card>
+                <md-toolbar class="md-warn md-hue-3">
+                    <div class="md-toolbar-tools">
+                        <h2>
+                            <span>Currently Doing</span>
+                        </h2>
+                        <span flex></span>
+                    </div>
+                </md-toolbar>
+            </md-card>
+            <md-whiteframe  sv-part="modelArray1">
+                <!--<span>.md-whiteframe-1dp</span>-->
+                <md-card ng-repeat="item in modelArray1" sv-element>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{item}}</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                </md-card>
+
+            </md-whiteframe>
+        </div>
+
+        <div flex="23" >
+            <md-card >
+                <md-toolbar class="md-warn md-hue-3">
+                    <div class="md-toolbar-tools">
+                        <h2>
+                            <span><center>Reviewing</center></span>
+                        </h2>
+                        <span flex></span>
+                    </div>
+                </md-toolbar>
+            </md-card>
+            <md-whiteframe  sv-part="modelArray2">
+                <!--<span>.md-whiteframe-1dp</span>-->
+                <md-card ng-repeat="item in modelArray2" sv-element>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{item}}</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                </md-card>
+            </md-whiteframe>
+        </div>
+
+        <div flex="23" >
+            <md-card >
+                <md-toolbar class="md-warn md-hue-3">
+                    <div class="md-toolbar-tools">
+                        <h2>
+                            <span><center>Completed</center></span>
+                        </h2>
+                        <span flex></span>
+                    </div>
+                </md-toolbar>
+            </md-card>
+            <md-whiteframe  sv-part="modelArray3">
+                <!--<span>.md-whiteframe-1dp</span>-->
+                <md-card ng-repeat="item in modelArray3" sv-element>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{item}}</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                </md-card>
+            </md-whiteframe>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+</html>
